@@ -36,7 +36,6 @@ relayr.connect(relayrKeys);
 
 Listen and do stuff
 ```js
-
 relayr.listen(function(err,data, device_id){
 
 	//fires for every sensor event
@@ -46,12 +45,9 @@ relayr.listen(function(err,data, device_id){
 		console.log(data);
 	}
 });
-
+```
 
 Unsubscribe all active sensors and stop receiving data
 ````js
 relayr.unsubscribeAll();
-
-=======
-
 ```
