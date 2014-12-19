@@ -1,0 +1,34 @@
+{
+  "name": "relayr",
+  "version": "0.1.1",
+  "description": "Relayr sensor SDK for node",
+  "main": "relayr.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/binarymax/node-relayr.git"
+  },
+  "keywords": [
+    "relayr",
+    "sensor",
+    "pubnub"
+  ],
+  "author": {
+    "name": "Max Irwin"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/binarymax/node-relayr/issues"
+  },
+  "homepage": "https://github.com/binarymax/node-relayr",
+  "dependencies": {
+    "request": "^2.45.0",
+    "pubnub": "^3.6.7"
+  },
+  "readme": "# node-relayr\n\nRelayr sensor SDK for node.\n\nWorks by connecting to the PubNub channel associated with your Relayr Wonderbar sensor.\n\n## installation\n\n```\nnpm install relayr\n```\n\n## connecting\n\nRequire the module\n\n```js\nvar relayr = require('relayr');\n```\n\nGet the following from your account at relayr.io\n\n```js\nvar relayrKeys = {\n\tapp_id: \"YOURAPPID\",\n\tdev_id: \"YOURDEVICEID\",\n\ttoken:  \"YOURSENSORTOKEN\"\n};\n```\n\nConnect using the keys:\n```js\nrelayr.connect(relayrKeys);\n```\n\nListen and do stuff\n```js\nrelayr.listen(function(err,data){\n\t//fires for every sensor event\n\tif (err) {\n\t\tconsole.log(\"Oh No!\", err)\n\t} else {\n\t\tconsole.log(data);\n\t}\n});\n\n```",
+  "readmeFilename": "README.md",
+  "_id": "relayr@0.1.1",
+  "_from": "relayr@"
+}
